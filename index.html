@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coming Soon!</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background:tomato;
+        color: #e0e4eb;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .container {
+        /* min-height: 100vh; */
+        height: auto; /* It takes the content height. */
+        position: relative;
+        overflow: hidden;
+    }
+    .container::after{
+        content:'';
+        height: 100%;
+        width: 100%;
+        background: coral url('./images/brick-wall-bricks-brickwork-1101125.jpg') 0px 0px no-repeat scroll;
+        filter: blur(3px);
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 500;
+    }
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 600;
+
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        color: #dc143c;
+        /* padding: 0 20px; */
+    }
+    .content span {
+        font-weight: bold;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 50%;
+        border: 1px solid wheat;
+        background-color: rgba(256,256,256,25%);
+    }
+    .content h1 {
+        padding: 20px 80px;
+        border: 3px solid wheat;
+        background-color: rgba(256,256,256,25%);
+        margin-bottom: 10px;
+    }
+    .content p {
+        margin-left: 334px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .content h1 {
+            padding: 10px 20px;
+        }
+        .content p {
+            margin-left: 214px;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="content">
+            <span>KH</span>
+            <h1>Coming Soon!</h1>
+            <p>আসিতেছে... </p>
+        </div>
+    </div>
+</body>
+</html>
