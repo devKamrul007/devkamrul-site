@@ -67,6 +67,10 @@
         margin-left: 334px;
     }
 
+    .hide {
+        opacity: 0;
+    }
+
     @media only screen and (max-width: 600px) {
         .content h1 {
             padding: 10px 20px;
@@ -80,9 +84,19 @@
     <div class="container">
         <div class="content">
             <span>KH</span>
-            <h1>Coming Soon!</h1>
+            <h1 id='blinker'>Coming Soon!</h1>
             <p>আসিতেছে... </p>
         </div>
     </div>
+    <script>
+        (function(){
+            var blinker = document.querySelector('#blinker');
+            setInterval (
+                function(){
+                    blinker.classList.toggle('hide');
+                },1000
+            );
+        })();
+    </script>
 </body>
 </html>
